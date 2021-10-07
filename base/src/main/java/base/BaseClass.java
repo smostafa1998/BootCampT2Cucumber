@@ -210,7 +210,7 @@ public class BaseClass {
 
     public void changeHiddenJS(WebElement element) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
-        String s = element.getAttribute("aria-hidden");
+        String s = "aria-hidden";
         String f = "false";
         js.executeScript("arguments[0].setAttribute(arguments[1],arguments[2]);", element, s, f);
     }

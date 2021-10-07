@@ -20,7 +20,7 @@ public class EbayStepsDefinitions extends BaseClass {
     public EbayStepsDefinitions() {
         sharedStepsUI = new SharedStepsUI();
         homepage = new Homepage();
-        artCollection = homepage.navigateToArtCollection();
+        artCollection = new ArtCollectionHomePage();
     }
 
     // STEPS DEFINITIONS GO IN HERE (i.e. A METHOD FOR EACH STEP OF THE SCENARIO)
