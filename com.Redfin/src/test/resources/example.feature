@@ -15,7 +15,6 @@ Feature: As a user, I should be able to navigate to the Homepage
       | Hand Sanitizer |        Health & Beauty          |
       | iPhone 13      |    Cell Phones & Accessories    |
 
-
   @BuyHousesHomePage
   Scenario Outline: User should be able to enter data to find houses to buy
     When user goes to buy page
@@ -23,11 +22,13 @@ Feature: As a user, I should be able to navigate to the Homepage
     And user adds the lowPrice Range for lowPrice
     And user adds the highPrice Range for highPrice
     And user clicks the search button
-    Then user finds search results
+    And user reaches the website results where user clicks on table view
+    Then user finds the sale name which matches the predefined "<sale name>"
 
     Examples:
-      | location       |
-      | Boston         |
-      | Maine          |
-      | Hawaii         |
+      | location       |sale name            |
+      | Boston         |Boston Homes for Sale|
+      | Maine          |Maine Homes for Sale |
+      | Hawaii         |Hawaii Homes for Sale|
+
 

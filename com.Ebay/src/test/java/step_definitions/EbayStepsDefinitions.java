@@ -20,6 +20,7 @@ public class EbayStepsDefinitions extends BaseClass {
     public EbayStepsDefinitions() {
         sharedStepsUI = new SharedStepsUI();
         homepage = new Homepage();
+        artCollection = homepage.navigateToArtCollection();
     }
 
     // STEPS DEFINITIONS GO IN HERE (i.e. A METHOD FOR EACH STEP OF THE SCENARIO)
@@ -60,9 +61,8 @@ public class EbayStepsDefinitions extends BaseClass {
     }
 
     @Then("user is shown results in the art page and {string} is shown")
-    public void userIsShownResultsInTheArtPageAndIsShown(String arg0) {
-        // where asserts are done
+    public void userIsShownResultsInTheArtPageAndIsShown(String searchTerm) {
+        Assert.assertEquals(artCollection.searchTerm.getText().toLowerCase(), searchTerm.toLowerCase());
     }
-
 
 }
