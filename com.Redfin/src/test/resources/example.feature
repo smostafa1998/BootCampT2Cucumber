@@ -14,3 +14,20 @@ Feature: As a user, I should be able to navigate to the Homepage
       | Playstation 5  |      Video Games & Consoles     |
       | Hand Sanitizer |        Health & Beauty          |
       | iPhone 13      |    Cell Phones & Accessories    |
+
+
+  @BuyHousesHomePage
+  Scenario Outline: User should be able to enter data to find houses to buy
+    When user goes to buy page
+    And user adds the "<location>"
+    And user adds the lowPrice Range for lowPrice
+    And user adds the highPrice Range for highPrice
+    And user clicks the search button
+    Then user finds search results
+
+    Examples:
+      | location       |
+      | Boston         |
+      | Maine          |
+      | Hawaii         |
+

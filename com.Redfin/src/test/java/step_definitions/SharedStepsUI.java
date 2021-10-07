@@ -3,11 +3,15 @@ package step_definitions;
 import base.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pom.Homepage;
 
 public class SharedStepsUI extends BaseClass {
 
     //SHARED WEB ELEMENTS GO HERE
+
 
     public SharedStepsUI() {
         PageFactory.initElements(driver, this);
@@ -27,11 +31,13 @@ public class SharedStepsUI extends BaseClass {
         driver.quit();
     }
 
-    public void openApplication() {
+    public Homepage openApplication() {
         String url = "https://redfin.com";
         driver.get(url);
+        return new Homepage();
     }
 
     // SHARED METHODS GO HERE
+
 
 }
