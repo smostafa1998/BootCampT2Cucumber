@@ -50,15 +50,14 @@ public class RedfinStepsDefinitions extends BaseClass {
     public void userAddsThe(String location) {
         homepage.sendKeywordLocation(houses.sendKeysToInput, location, houses.firstLocationPick);
     }
-
-    @And("user adds the lowPrice Range for lowPrice")
-    public void userAddsTheLowPriceRangeForLowPrice() {
-        buttonSelect(houses.clickButton, houses.minPrice);
+    @And("user adds the {string} for low price Range")
+    public void userAddsTheForLowPriceRange(String lowPrice) {
+        homepage.clickOnMinRange(houses.clickButton,lowPrice);
     }
 
-    @And("user adds the highPrice Range for highPrice")
-    public void userAddsTheHighPriceRangeForHighPrice() {
-        buttonSelect(houses.clickButton2, houses.maxPrice);
+    @And("user adds the {string} for high price Range")
+    public void userAddsTheForHighPriceRange(String highPrice) {
+        homepage.clickOnMaxRange(houses.clickButton2,highPrice);
     }
 
     @And("user clicks the search button")
@@ -75,4 +74,7 @@ public class RedfinStepsDefinitions extends BaseClass {
     public void userFindsTheSaleNameWhichMatchesThePredefined(String saleName) {
         Assert.assertEquals(houses.getSaleName.getText(), saleName);
     }
+
+
+
 }
