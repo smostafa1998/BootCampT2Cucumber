@@ -49,4 +49,17 @@ public class Homepage extends BaseClass {
         sendKeysToInput(password,passwordName);
     }
 
+    public void enterEmail(WebElement email, String emailName){
+        waitForElementToBeVisible(email);
+        clickOnElement(email);
+        sendKeysToInput(email,emailName);
+    }
+
+    public void enterPassword(WebElement password, String passwordName){
+        waitForElementToBeVisible(password);
+        clickOnElement(password);
+        sendKeysToInput(password,passwordName);
+    }
+
+
 }

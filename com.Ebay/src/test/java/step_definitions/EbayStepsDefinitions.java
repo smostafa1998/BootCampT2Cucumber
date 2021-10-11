@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import pom.ArtCollectionHomePage;
 import pom.Homepage;
@@ -66,5 +67,57 @@ public class EbayStepsDefinitions extends BaseClass {
     }
 
 
+    @When("user clicks on ArtCollection the other way")
+    public void userClicksOnArtCollectionTheOtherWay() {
+        homepage.navigateToArtCollection2();
+    }
+
+    @And("user clicks on the sell something button")
+    public void userClicksOnTheSellSomethingButton() {
+        clickOnElement(artCollection.sellSomething);
+    }
+
+    @And("user clicks on the popular featured button")
+    public void userClicksOnThePopularFeaturedButton() {
+        clickOnElement(artCollection.popularFeaturedButton);
+    }
+
+    @And("user selects a video game from the category list")
+    public void userSelectsAVideoGameFromTheCategoryList() {
+        clickOnElement(artCollection.videoCategory);
+    }
+
+    @And("user clicks on the {string} state")
+    public void userClicksOnTheState(String condition) {
+        homepage.clickOnCondition(artCollection.A, condition);
+    }
+
+
+    @And("user clicks on the {string} brand name")
+    public void userClicksOnTheBrandName(String publisher) {
+        clickOnElement(artCollection.B);
+        //sendKeysToInput(artCollection.Binput,"Nintendo");
+        artCollection.Binput.sendKeys("Nintendo",Keys.ARROW_DOWN, Keys.RETURN);
+    }
+
+
+    @And("user then clicks on the {string} game name")
+    public void userThenClicksOnTheGameName(String game_name) {
+        clickOnElement(artCollection.C);
+        sendKeysToInput(artCollection.Cinput,"Wii Sports");
+        artCollection.Cinput.sendKeys(Keys.ARROW_DOWN,Keys.RETURN);
+        //homepage.clickOnGame(artCollection.modelBox, game_name);
+    }
+
+
+    @And("user then clicks on the {string} platform name")
+    public void userThenClicksOnThePlatformName(String platform) {
+        homepage.clickOnPlatform(artCollection.platformBox, platform);
+    }
+
+    @And("user then clicks on the {string} genre name")
+    public void userThenClicksOnTheGenreName(String genre) {
+        homepage.clickOnGenre(artCollection.regionBox, genre);
+    }
 
 }

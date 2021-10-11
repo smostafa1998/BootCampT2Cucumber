@@ -30,3 +30,18 @@ Feature: As a user, I should be able to navigate to the Homepage
       | wall paper     | How to Style Dining Room Wallpaper                   |
       | paintings      | French Country Living Room Ideas                     |
       | couches        | Best Sectional Sofas & Couches for Small Spaces      |
+
+
+  @DecorT2
+  Scenario Outline: User should be able to navigate to the decor page and log in but fail
+    When user navigates to the decor page from homepage
+    And user clicks on account buttons
+    And user sends a "<email>" to the email bar
+    And user sends a "<password>" to the password bar
+    Then user clicks to sign in but fails
+
+    Examples:
+      | email                 | password    |
+      | smostafa1998@gmail.com| testing123  |
+      | john2345@gmail.com    | applebottom |
+      | alex3453@gmail.com    | lmaorandom  |

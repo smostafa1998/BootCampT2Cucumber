@@ -69,4 +69,27 @@ public class OverstockStepsDefinitions extends BaseClass {
     public void userChecksIfOfTheArticleIsAsserted(String title) {
         Assert.assertEquals(decor.grabArticleTitle.getText(), title);
     }
+
+    @And("user clicks on account buttons")
+    public void userClicksOnAccountButtons() {
+        clickOnElement(decor.inputAccount);
+        foundIframe(decor.loginIframe);
+    }
+
+    @And("user sends a {string} to the email bar")
+    public void userSendsAToTheEmailBar(String email) {
+        homepage.enterEmail(decor.inputEmail,email);
+    }
+
+    @And("user sends a {string} to the password bar")
+    public void userSendsAToThePasswordBar(String password) {
+        homepage.enterPassword(decor.inputPassword,password);
+    }
+
+    @Then("user clicks to sign in but fails")
+    public void userClicksToSignInButFails() {
+        clickOnElement(decor.submitButton);
+        waitForElementToBeVisible(decor.registerErrorMessage);
+        Assert.assertEquals(decor.registerErrorMessage.getText(),"There was an error, please try again.");
+    }
 }
