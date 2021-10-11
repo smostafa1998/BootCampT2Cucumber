@@ -65,4 +65,6 @@ public class EbayStepsDefinitions extends BaseClass {
         Assert.assertEquals(artCollection.searchTerm.getText().toLowerCase(), searchTerm.toLowerCase());
     }
 
+
+
 }
