@@ -43,7 +43,7 @@ public class FlightsHomePage extends BaseClass {
     @FindBy(xpath="//*[@data-stid=\"apply-date-picker\"]")
     public WebElement doneButton;
 
-    @FindBy(xpath="//*[@id=\"app-layer-base\"]/div[2]/div[3]/div[1]/aside/fieldset/div/legend")
+    @FindBy(xpath="//*[@id=\"app-layer-base\"]/div/div[3]/div[1]/aside/fieldset/div/legend")
     public WebElement confirmRR;
 
 
