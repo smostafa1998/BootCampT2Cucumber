@@ -120,4 +120,25 @@ public class EbayStepsDefinitions extends BaseClass {
         homepage.clickOnGenre(artCollection.regionBox, genre);
     }
 
+    @When("user clicks on ArtCollection the hover way")
+    public void userClicksOnArtCollectionTheHoverWay() {
+        homepage.hoverToArt();
+    }
+
+    @And("user clicks on one of the {string}")
+    public void userClicksOnOneOfThe(String category) {
+        homepage.clickOnCategory(category);
+    }
+
+    @And("user then clicks on one of the categories {string}")
+    public void userThenClicksOnOneOfTheCategories(String topic) {
+        homepage.clickOnTopic(topic);
+    }
+
+    @Then("user asserts the {string}")
+    public void userAssertsThe(String title) {
+        Assert.assertEquals(driver.getCurrentUrl(), title);
+    }
+
+
 }

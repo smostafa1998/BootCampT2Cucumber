@@ -18,19 +18,15 @@ Feature: As a user, I should be able to navigate to the Homepage
       | barbies        |   267     |
       | van gogh       |  11450    |
 
-  @ArtCollectionT2
+  @ArtCollectionT3
   Scenario Outline: User is at ArtCollection Page and be able to search items
-    When user clicks on ArtCollection the other way
-    And user clicks on the sell something button
-    And user clicks on the popular featured button
-    And user selects a video game from the category list
-    And user clicks on the "<condition>" state
-    And user clicks on the "<publisher>" brand name
-    And user then clicks on the "<game_name>" game name
-    And user then clicks on the "<platform>" platform name
-    And user then clicks on the "<genre>" genre name
+    When user clicks on ArtCollection the hover way
+    And user clicks on one of the "<categories>"
+    And user then clicks on one of the categories "<types>"
+    Then user asserts the "<websiteURL>"
 
     Examples:
-       | condition| publisher| game_name | platform    |genre |
-       |   2      | 1        | Wii Sports| Nintendo Wii|Sports|
-
+      | categories| types    |                          websiteURL                                               |
+      |   1       | 1        | https://www.ebay.com/b/Art-Prints/360/bn_2311282                                  |
+      |   2       | 1        | https://www.ebay.com/e/home-garden/vintage-and-new                                |
+      |   4       | 2        | https://www.ebay.com/b/Collectible-Funko-Bobbleheads-1970-Now/149372/bn_3017826   |

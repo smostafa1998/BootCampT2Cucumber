@@ -211,4 +211,5 @@ public class ArtCollectionHomePage extends BaseClass {
     @FindBy(xpath="//*[@id=\"s0-11-13-0-1[2]-0-0-0-ebayCarousel-6[2]-38-selectField-searchbox\"]")
     public WebElement Cinput;
 
+
 }

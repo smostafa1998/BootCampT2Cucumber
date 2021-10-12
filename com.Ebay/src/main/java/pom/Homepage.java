@@ -78,4 +78,20 @@ public class Homepage extends BaseClass {
         clickOnElement(element);
     }
 
+    public void clickOnCategory(String category){
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"mainContent\"]/div[1]/ul/li[6]/div[2]/div[1]/nav[1]/ul/li"+"["+category+"]"+"/a"));
+        clickOnElement(element);
+    }
+
+    public void clickOnTopic(String topic){
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"mainContent\"]/section[1]/div[2]/a"+"["+topic+"]"));
+        clickOnElement(element);
+    }
+
+    public void findlabel(String label){
+        WebElement element = driver.findElement(By.xpath("//*[@id=\"s0-16-13-0-1[0]-0-0\"]/ul/li/a"+"["+label+"]"));
+        waitForElementToBeVisible(element);
+    }
+
+
 }
