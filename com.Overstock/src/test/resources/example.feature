@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be able to navigate to the Homepage
 
   Background:
@@ -10,10 +9,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user navigates to the Homepage
 
     Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+      | search term    | category                  |
+      | Playstation 5  | Video Games & Consoles    |
+      | Hand Sanitizer | Health & Beauty           |
+      | iPhone 13      | Cell Phones & Accessories |
 
 
   @Decor
@@ -26,10 +25,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user checks if "<title>" of the article is asserted
 
     Examples:
-      | search term    |           title                                      |
-      | wall paper     | How to Style Dining Room Wallpaper                   |
-      | paintings      | French Country Living Room Ideas                     |
-      | couches        | Best Sectional Sofas & Couches for Small Spaces      |
+      | search term | title                                           |
+      | wall paper  | How to Style Dining Room Wallpaper              |
+      | paintings   | French Country Living Room Ideas                |
+      | couches     | Best Sectional Sofas & Couches for Small Spaces |
 
 
   @DecorT2
@@ -41,7 +40,7 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user clicks to sign in but fails
 
     Examples:
-      | email                 | password    |
-      | smostafa1998@gmail.com| testing123  |
-      | john2345@gmail.com    | applebottom |
-      | alex3453@gmail.com    | lmaorandom  |
+      | email                  | password    |
+      | smostafa1998@gmail.com | testing123  |
+      | john2345@gmail.com     | applebottom |
+      | alex3453@gmail.com     | lmaorandom  |

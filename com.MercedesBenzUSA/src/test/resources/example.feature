@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be able to navigate to the Homepage
 
   Background:
@@ -10,10 +9,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user navigates to the Homepage
 
     Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+      | search term    | category                  |
+      | Playstation 5  | Video Games & Consoles    |
+      | Hand Sanitizer | Health & Beauty           |
+      | iPhone 13      | Cell Phones & Accessories |
 
   @ShoppingPage
   Scenario Outline: User should be able to navigate to the homepage
@@ -28,8 +27,8 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user sees the results sheet for the cars with the "<num_of_vehicles>"
 
     Examples:
-      | monthly_payment|down_payment_info | term | year| num_of_vehicles         |
-      | 50000          |  1000            | 48   | 2021| Viewing 0 of 0 vehicles |
-      | 100000         |  2000            | 36   | 2021| Viewing 0 of 0 vehicles |
-      | 70000          |  3500            | 24   | 2020| Viewing 0 of 0 vehicles |
+      | monthly_payment | down_payment_info | term | year | num_of_vehicles         |
+      | 50000           | 1000              | 48   | 2021 | Viewing 0 of 0 vehicles |
+      | 100000          | 2000              | 36   | 2021 | Viewing 0 of 0 vehicles |
+      | 70000           | 3500              | 24   | 2020 | Viewing 0 of 0 vehicles |
 

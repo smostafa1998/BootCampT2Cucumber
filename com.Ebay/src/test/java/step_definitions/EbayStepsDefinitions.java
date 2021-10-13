@@ -42,7 +42,7 @@ public class EbayStepsDefinitions extends BaseClass {
     public void userNavigatesToTheHomepage() {
         Assert.assertEquals(driver.getCurrentUrl(), "https://www.ebay.com/");
     }
-  
+
     @When("user clicks on ArtCollection button")
     public void userClicksOnArtCollectionButton() {
         homepage.navigateToArtCollection();
@@ -93,8 +93,8 @@ public class EbayStepsDefinitions extends BaseClass {
     public void userClicksOnTheState(String condition) {
         homepage.clickOnCondition(artCollection.A, condition);
     }
-  
-  
+
+
     @And("search for women clothing")
     public void enter_in_search_box() {
         driver.findElement(By.xpath("//input[@type='text']")).sendKeys("Women clothing");
@@ -129,7 +129,7 @@ public class EbayStepsDefinitions extends BaseClass {
     }
 
     @Then("i should see no items in cart message displayed")
-    public void i_should_see_no_items_in_cart_message_displayed()  {
+    public void i_should_see_no_items_in_cart_message_displayed() {
         if (driver.findElement(By.xpath("//div[@class='font-title-3']")).isDisplayed())
 
             //pass
@@ -148,26 +148,26 @@ public class EbayStepsDefinitions extends BaseClass {
 
     @Then("i should navigate back to shopping page")
     public Boolean is_shopping_page_displayed() {
-        if (driver.findElement(By.xpath("//*[@id='gh-shop-a']")).isDisplayed()){
+        if (driver.findElement(By.xpath("//*[@id='gh-shop-a']")).isDisplayed()) {
             return true;
         }
         System.out.println("shopping page displayed");
         return false;
     }
-  
+
     @And("user clicks on the {string} brand name")
     public void userClicksOnTheBrandName(String publisher) {
         clickOnElement(artCollection.B);
         //sendKeysToInput(artCollection.Binput,"Nintendo");
-        artCollection.Binput.sendKeys("Nintendo",Keys.ARROW_DOWN, Keys.RETURN);
+        artCollection.Binput.sendKeys("Nintendo", Keys.ARROW_DOWN, Keys.RETURN);
     }
 
 
     @And("user then clicks on the {string} game name")
     public void userThenClicksOnTheGameName(String game_name) {
         clickOnElement(artCollection.C);
-        sendKeysToInput(artCollection.Cinput,"Wii Sports");
-        artCollection.Cinput.sendKeys(Keys.ARROW_DOWN,Keys.RETURN);
+        sendKeysToInput(artCollection.Cinput, "Wii Sports");
+        artCollection.Cinput.sendKeys(Keys.ARROW_DOWN, Keys.RETURN);
         //homepage.clickOnGame(artCollection.modelBox, game_name);
     }
 

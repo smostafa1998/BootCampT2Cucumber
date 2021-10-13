@@ -1,15 +1,15 @@
 
 Feature: As a user, I should be able to navigate to the Homepage
 
-  Scenario: User should be able to build his own vehicle
+  Scenario Outline: User should be able to build his own vehicle
     When user enters the url
     Then user navigates to the Homepage
 
     Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+      | search term    | category                  |
+      | Playstation 5  | Video Games & Consoles    |
+      | Hand Sanitizer | Health & Beauty           |
+      | iPhone 13      | Cell Phones & Accessories |
 
   @ShoppingPage
   Scenario Outline: User should be able to navigate to the homepage

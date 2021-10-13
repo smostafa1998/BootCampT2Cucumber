@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be able to navigate to the Homepage
 
   Background:
@@ -10,10 +9,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user navigates to the Homepage
 
     Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+      | search term    | category                  |
+      | Playstation 5  | Video Games & Consoles    |
+      | Hand Sanitizer | Health & Beauty           |
+      | iPhone 13      | Cell Phones & Accessories |
 
   @BuyHousesHomePage
   Scenario Outline: User should be able to enter data to find houses to buy
@@ -26,9 +25,9 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user finds the sale name which matches the predefined "<sale name>"
 
     Examples:
-      | location       |sale name            | lowPrice | highPrice|
-      | Boston         |Boston Homes for Sale| $100k    | $200k    |
-      | Maine          |Maine Homes for Sale | $100k    | $200k    |
-      | Hawaii         |Hawaii Homes for Sale| $100k    | $200k    |
+      | location | sale name             | lowPrice | highPrice |
+      | Boston   | Boston Homes for Sale | $100k    | $200k     |
+      | Maine    | Maine Homes for Sale  | $100k    | $200k     |
+      | Hawaii   | Hawaii Homes for Sale | $100k    | $200k     |
 
 

@@ -19,35 +19,35 @@ public class Homepage extends BaseClass {
     @FindBy(xpath = "//*[@id=\"wizardMainRegionV2\"]//div[2]//ul/li[2]/a")
     public WebElement flightsLink;
 
-    public FlightsHomePage navigateToFlight(){
+    public FlightsHomePage navigateToFlight() {
         clickOnElement(flightsLink);
         return new FlightsHomePage();
     }
 
-    public void setUpLocations(WebElement location, WebElement locationText, String text, WebElement firstResult){
+    public void setUpLocations(WebElement location, WebElement locationText, String text, WebElement firstResult) {
         clickOnElement(location);
-        sendKeysToInput(locationText,text);
+        sendKeysToInput(locationText, text);
         clickOnElement(firstResult);
     }
 
 
-    public void selectBox(WebElement input){
+    public void selectBox(WebElement input) {
         clickOnElement(input);
         webDriverWait.until(ExpectedConditions.elementSelectionStateToBe(input, true));
     }
 
-    public void unselectBox(WebElement input){
+    public void unselectBox(WebElement input) {
         clickOnElement(input);
         webDriverWait.until(ExpectedConditions.elementSelectionStateToBe(input, false));
     }
 
-    public void clickStartDate(WebElement date,String startingDate){
+    public void clickStartDate(WebElement date, String startingDate) {
         clickOnElement(date);
         WebElement element = driver.findElement(By.xpath("//*[@aria-label=\"" + startingDate + "\"]"));
         clickOnElement(element);
     }
 
-    public void clickEndDate(WebElement done,String endingDate){
+    public void clickEndDate(WebElement done, String endingDate) {
         WebElement element = driver.findElement(By.xpath("//*[@aria-label=\"" + endingDate + "\"]"));
         clickOnElement(element);
         clickOnElement(done);
