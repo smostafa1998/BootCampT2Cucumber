@@ -1,11 +1,7 @@
 
 Feature: As a user, I should be able to navigate to the Homepage
 
-  Background:
-    Given user is at homepage
-
-  @Homepage
-  Scenario Outline: User should be able to navigate to the homepage
+  Scenario: User should be able to build his own vehicle
     When user enters the url
     Then user navigates to the Homepage
 

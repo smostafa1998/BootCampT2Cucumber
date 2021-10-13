@@ -5,12 +5,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Given user is at homepage
 
   @Homepage
-  Scenario Outline: User should be able to navigate to the homepage
+  Scenario:User should be able to navigate to the homepage
     When user enters the url
     Then user navigates to the Homepage
-
-    Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+    And i go to home loans
+    And i should see Mortgages
+    And i should see Refinance
+    And i should see Home Equity

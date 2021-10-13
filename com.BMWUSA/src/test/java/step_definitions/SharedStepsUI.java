@@ -27,7 +27,7 @@ public class SharedStepsUI extends BaseClass {
         driver.close();
         driver.quit();
     }
-
+  
     public Homepage openApplication() {
         String url = "https://www.bmwusa.com/";
         driver.get(url);
