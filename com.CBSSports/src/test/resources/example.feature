@@ -4,6 +4,14 @@ Feature: As a user, I should be able to navigate to the Homepage
   Background:
     Given user is at homepage
 
+  Scenario: login and log out from my account
+    And i want to login to my account
+    And i enter username and password
+    And i click login
+    Then i should see my team box is displayed
+    And i want to log off
+    Then i should navigate back to homepage
+
   @Homepage
   Scenario Outline: User should be able to navigate to the homepage
     When user enters the url
@@ -30,3 +38,4 @@ Feature: As a user, I should be able to navigate to the Homepage
       |      8       |   1    |Ireland National Team New Era HD Logo A-Frame 39THIRTY Flex Hat - Green       |
       |      6       |   5    |France National Team Nike Supporter Soccer Ball                               |
       |      9       |   4    |Italy Personalized Name & Number T-Shirt - Black                              |
+
