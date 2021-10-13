@@ -4,6 +4,7 @@ import base.BaseClass;
 import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.WebElement;
 import pom.Homepage;
+import pom.NFLHomePage;
 
 public class TestBase extends BaseClass {
 
@@ -11,6 +12,9 @@ public class TestBase extends BaseClass {
         return new Homepage();
     }
 
+    public NFLHomePage getNFLHomePage(){
+        return new NFLHomePage();
+    }
 
     public boolean isElementPresent(WebElement element) {
         boolean flag = false;

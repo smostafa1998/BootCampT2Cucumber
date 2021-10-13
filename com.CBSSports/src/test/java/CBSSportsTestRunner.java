@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/example.feature"},
         glue = {"step_definitions"},
-//    tags = "@Deals",
+        tags = "@SoccerShopping",
         monochrome = true,
         plugin = {"pretty", "html:target/cucumber-html-report.html"}
 )

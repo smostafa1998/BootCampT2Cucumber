@@ -4,6 +4,7 @@ import base.BaseClass;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import org.openqa.selenium.support.PageFactory;
+import pom.Homepage;
 
 public class SharedStepsUI extends BaseClass {
 
@@ -26,10 +27,11 @@ public class SharedStepsUI extends BaseClass {
         driver.close();
         driver.quit();
     }
-
-    public void openApplication() {
+  
+    public Homepage openApplication() {
         String url = "https://www.bmwusa.com/";
         driver.get(url);
+        return new Homepage();
     }
 
     // SHARED METHODS GO HERE
