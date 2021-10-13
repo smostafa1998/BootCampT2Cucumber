@@ -1,4 +1,3 @@
-
 Feature: As a user, I should be able to navigate to the Homepage
 
   Background:
@@ -18,10 +17,10 @@ Feature: As a user, I should be able to navigate to the Homepage
     Then user navigates to the Homepage
 
     Examples:
-      | search term    |           category              |
-      | Playstation 5  |      Video Games & Consoles     |
-      | Hand Sanitizer |        Health & Beauty          |
-      | iPhone 13      |    Cell Phones & Accessories    |
+      | search term    | category                  |
+      | Playstation 5  | Video Games & Consoles    |
+      | Hand Sanitizer | Health & Beauty           |
+      | iPhone 13      | Cell Phones & Accessories |
 
   @SoccerShopping
   Scenario Outline: User is in soccer page and navigates to shopping page to buy item
@@ -34,8 +33,8 @@ Feature: As a user, I should be able to navigate to the Homepage
 
 
     Examples:
-      | soccer_team  |products|                           item_name                                          |
-      |      8       |   1    |Ireland National Team New Era HD Logo A-Frame 39THIRTY Flex Hat - Green       |
-      |      6       |   5    |France National Team Nike Supporter Soccer Ball                               |
-      |      9       |   4    |Italy Personalized Name & Number T-Shirt - Black                              |
+      | soccer_team | products | item_name                                                                     |
+      | 8           | 1        | Ireland National Team New Era Tonal Rubber Logo 9FORTY Adjustable Hat - Green |
+      | 6           | 5        | France National Team Nike Full-Zip Parka Jacket - Black/Red                   |
+      | 9           | 4        | Italy National Team Puma Youth 2021/22 Away Replica Jersey - White/Navy       |
 
